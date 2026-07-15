@@ -1,4 +1,4 @@
-package xyz.fireworkwars.commonapi
+package xyz.fireworkwars.coreapi
 
 import net.kyori.adventure.text.Component
 import net.kyori.adventure.text.format.NamedTextColor

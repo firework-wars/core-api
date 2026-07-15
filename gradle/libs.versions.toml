@@ -4,4 +4,5 @@ paper = "2.0.0-beta.21"
 
 [plugins]
 kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 paper = { id = "io.papermc.paperweight.userdev", version.ref = "paper" }
