@@ -12,7 +12,7 @@ repositories {
 dependencies {
     compileOnly(kotlin("stdlib"))
     compileOnly("org.jetbrains.kotlinx:kotlinx-serialization-json:1.11.0")
-    compileOnly("com.github.firework-wars:database-api:0.1.0")
+    compileOnly("com.github.firework-wars:database-api:0.2.0")
     paperweight.paperDevBundle("26.1.2.build.+")
 }
 
@@ -23,4 +23,4 @@ java {
 }
 
 group = "xyz.fireworkwars"
-version = "0.1.0"
+version = "0.6.0"
