@@ -1,6 +1,7 @@
 package xyz.fireworkwars.coreapi
 
 import kotlinx.serialization.Serializable
+import xyz.fireworkwars.data.ConnectionSettings
 
 @Serializable
 data class CoreConfig(

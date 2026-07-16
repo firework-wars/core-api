@@ -1,10 +1,14 @@
 package xyz.fireworkwars.coreapi
 
 import org.bukkit.entity.Player
+import xyz.fireworkwars.data.PlayerProfiles
+import xyz.fireworkwars.data.Rank
 import java.sql.Connection
 import java.util.UUID
 
 interface FireworkCoreApi {
+
+    fun getPlayerProfiles(): PlayerProfiles
 
     fun getRank(uuid: UUID): Rank
 
