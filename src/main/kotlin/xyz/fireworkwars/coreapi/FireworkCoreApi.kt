@@ -1,6 +1,7 @@
 package xyz.fireworkwars.coreapi
 
 import org.bukkit.Location
+import org.bukkit.World
 import org.bukkit.entity.Player
 import xyz.fireworkwars.data.Achievement
 import xyz.fireworkwars.data.Customisation
@@ -37,4 +38,16 @@ interface FireworkCoreApi {
 
     /** Plays [player]'s chosen death effect at [location]. */
     fun playDeathEffect(player: Player, location: Location)
+
+    /** Circles [viewers]' camera around [center] at [radius] blocks out and [height] blocks up, for [ticks]. */
+    fun panCamera(viewers: Collection<Player>, center: Location, radius: Double, height: Double, ticks: Int): CameraShot
+
+    /** Keeps the last few seconds of every player in [world] (moves, swings, hits, projectiles, explosions) for a final kill replay. */
+    fun startRecording(world: World)
+
+    /**
+     * Replays the last seconds before [victim] died to [viewers], from a camera following the fight, then runs [then].
+     * False (and [then] isn't run) if there's nothing recorded to replay.
+     */
+    fun replayFinalKill(victim: UUID, killer: UUID?, viewers: Collection<Player>, then: Runnable): Boolean
 }
