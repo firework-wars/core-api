@@ -30,21 +30,13 @@ interface FireworkCoreApi {
 
     fun setChatPrefixSuppressed(player: Player, suppressed: Boolean)
 
-    /** Saves a finished game's stats for [uuid], and gives them its XP and any achievements it earned (with a summary, if they're online). */
     fun finishGame(uuid: UUID, gameType: String, kills: Int, died: Boolean, damage: Double, result: GameResult)
 
-    /** Gives [player] [achievement] and its XP; nothing happens if they already have it. */
     fun unlockAchievement(player: Player, achievement: Achievement)
 
-    /** Plays [player]'s chosen death effect at [location]. */
     fun playDeathEffect(player: Player, location: Location)
 
-    /** Keeps the last few seconds of every player in [world] (moves, swings, hits, projectiles, explosions) for a final kill replay. */
     fun startRecording(world: World)
 
-    /**
-     * Replays the last seconds before [victim] died to [viewers], from a camera following the fight, then runs [then].
-     * False (and [then] isn't run) if there's nothing recorded to replay.
-     */
     fun replayFinalKill(victim: UUID, killer: UUID?, viewers: Collection<Player>, then: Runnable): Boolean
 }
