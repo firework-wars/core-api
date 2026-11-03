@@ -39,9 +39,6 @@ interface FireworkCoreApi {
     /** Plays [player]'s chosen death effect at [location]. */
     fun playDeathEffect(player: Player, location: Location)
 
-    /** Circles [viewers]' camera around [center] at [radius] blocks out and [height] blocks up, for [ticks]. */
-    fun panCamera(viewers: Collection<Player>, center: Location, radius: Double, height: Double, ticks: Int): CameraShot
-
     /** Keeps the last few seconds of every player in [world] (moves, swings, hits, projectiles, explosions) for a final kill replay. */
     fun startRecording(world: World)
 
